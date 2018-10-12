@@ -3,7 +3,7 @@
     "composer": "^0.20.1"
   },
   "name": "brp",
-  "version": "0.0.3",
+  "version": "0.0.20",
   "description": "Decentrale Basis Registratie Personen",
   "scripts": {
     "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/brp.bna",

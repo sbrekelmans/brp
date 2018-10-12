@@ -1,0 +1,5 @@
+query selectEntiteiten {
+  description: "Selecteer all entiteiten"
+  statement:
+      SELECT org.brp.Entiteit
+     }

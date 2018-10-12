@@ -1,50 +1,41 @@
 namespace org.brp
 
 // ENUMS
-enum OrgType {
-  o OVERHEID
-  o PUBLIEKE_ORGANISATIE
-  o IDENTITY_PROVIDER
-}
 
-participant Persoon identified by persoonId {
-  o String persoonId
-}
-
-participant Organisatie identified by organisatieId {
-  o String organisatieId
-  o String naam
-  o OrgType type
+participant Entiteit identified by did {
+  o String did
+  o String verifyKey
+  o String encryptionPublicKey
 }
 
 asset Claim identified by claimId {
-  o Voorwaarde[] voorwaarden
   o String claimId
-  --> Persoon [] eigenaar
-  --> Organisatie [] verificator
-  o String value
+  o String ClaimContent
+	o	String Hash
+  o String SignedClaim
+  --> Entiteit eigenaar optional
+  --> Entiteit verificator optional
 }
-
-// CONCEPTS
-concept Voorwaarde {
-  o String voorwaardeId
-  o String voorwaardeTekst
-}
-
 
 // TRANSACTIONS + EVENTS
-transaction ClaimAanvraag {
+transaction CreateClaim {
   o String claimId
-  --> Persoon aanvrager
-  o Voorwaarde[] voorwaarden
+  o String ClaimContent
+	o	String Hash
+  o String SignedClaim
+  --> Entiteit eigenaar optional
+  --> Entiteit verificator optional
 }
 
-transaction Onderteken {
+event CreateClaimEvent {
   --> Claim claim
-  --> Organisatie verificatiePartij
+}
+transaction Onderteken {
+  --> Claim claimcontent
+  --> Entiteit ondersteunendePartij
 }
 
 event OndertekenEvent {
-  --> Claim claim
-  --> Organisatie verificatiePartij
+  --> Claim claimcontent
+  --> Entiteit ondersteunendePartij
 }
