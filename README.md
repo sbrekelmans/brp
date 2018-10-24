@@ -1,8 +1,8 @@
-###Decentrale Basis Registratie Personen
+# Decentrale Basis Registratie Personen
 
-##Proof of Concept gebouwd op Hyperledger Fabric
+## Proof of Concept gebouwd op Hyperledger Fabric
 
-#Gebruik via Hyperledger Composer Playground (eenvoudig)
+### Gebruik via Hyperledger Composer Playground (eenvoudig)
 
 Open de Hyperledger Playground via https://composer-playground.mybluemix.net/login
 
@@ -16,7 +16,7 @@ Je kunt nu als administrator zelfstandig assets/entiteiten aanmaken, transacties
 
 bron: https://hyperledger.github.io/composer/latest/tutorials/playground-tutorial.html
 
-#Je eigen blockchain en REST-server deployen
+# Je eigen blockchain en REST-server deployen
 Dit is iets lastiger, maar instructies zijn goed te vinden via de documentatie van Hyperledger Fabric:
 
 1. Installeer eerst de developers tools van Hyperledger Fabric (https://hyperledger.github.io/composer/latest/installing/development-tools.html)
