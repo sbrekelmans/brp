@@ -16,7 +16,7 @@ Je kunt nu als administrator zelfstandig assets/entiteiten aanmaken, transacties
 
 bron: https://hyperledger.github.io/composer/latest/tutorials/playground-tutorial.html
 
-# Je eigen blockchain en REST-server deployen
+### Je eigen blockchain en REST-server deployen
 Dit is iets lastiger, maar instructies zijn goed te vinden via de documentatie van Hyperledger Fabric:
 
 1. Installeer eerst de developers tools van Hyperledger Fabric (https://hyperledger.github.io/composer/latest/installing/development-tools.html)
@@ -24,7 +24,4 @@ Dit is iets lastiger, maar instructies zijn goed te vinden via de documentatie v
 3. Deploy deze repository zoals beschreven in deze handleiding: https://hyperledger.github.io/composer/latest/business-network/bnd-deploy
 Netwerknaam is "brp", Admincard is "PeerAdmin@hlfv1", networkADmin en adminSecret zijn "admin" en "adminpw" respectievelijk.
 4. Open de composer RESTful server met `composer-rest-server -c admin@brp -n never -u true -w true` om een API te openen op poort 3001 van je lokale omgeving - 127.0.0.1:3001
-Met deze koppeling kan je op basis van elk framework een applicatie bouwen om te interacteren met deze blockchain.  
-
-
-
+Met deze koppeling kan je op basis van elk framework een applicatie bouwen om te interacteren met deze blockchain.
